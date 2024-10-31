@@ -1,4 +1,18 @@
 const Hero = () => {
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      const navbarHeight = 64; // 4rem oder h-16
+      const elementPosition = contactSection.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <div className="relative h-[600px]">
       <div className="absolute inset-0">
@@ -17,7 +31,10 @@ const Hero = () => {
           <p className="text-xl mb-8 max-w-2xl">
             Willkommen bei MEK Security – Ihr zuverlässiger Partner für professionelle Sicherheitslösungen in Siegen. Mit über 20 Jahren Erfahrung bieten wir maßgeschneiderte Sicherheitskonzepte für eine Vielzahl von Veranstaltungen und Objekten.
           </p>
-          <button className="bg-primary-gold hover:bg-primary-beige text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors">
+          <button 
+            onClick={scrollToContact}
+            className="bg-primary-gold hover:bg-primary-beige text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors"
+          >
             Kontakt aufnehmen
           </button>
         </div>

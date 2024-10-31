@@ -1,9 +1,33 @@
 import { Star, ChevronLeft, ChevronRight } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const Celebrities = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
   
+  // Automatischer Slide alle 5 Sekunden
+  useEffect(() => {
+    let slideInterval: number;
+
+    if (!isPaused) {
+      slideInterval = window.setInterval(() => {
+        setCurrentIndex((prevIndex) => 
+          prevIndex === celebrities.length - 1 ? 0 : prevIndex + 1
+        );
+      }, 5000);
+    }
+
+    return () => {
+      if (slideInterval) {
+        clearInterval(slideInterval);
+      }
+    };
+  }, [isPaused]);
+
+  // Pause beim Hover
+  const handleMouseEnter = () => setIsPaused(true);
+  const handleMouseLeave = () => setIsPaused(false);
+
   const celebrities = [
     {
       name: "Felix Sturm",
@@ -100,7 +124,11 @@ const Celebrities = () => {
           </p>
         </div>
 
-        <div className="relative">
+        <div 
+          className="relative"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
           <div className="overflow-hidden">
             <div 
               className="flex transition-transform duration-300 ease-in-out"
