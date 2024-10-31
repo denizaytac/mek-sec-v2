@@ -1,4 +1,3 @@
-import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Services from './components/Services';
@@ -13,6 +12,7 @@ import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import CookieBanner from './components/CookieBanner';
 import Impressum from './components/Impressum';
+import StructuredData from './components/StructuredData';
 
 function App() {
   // Get the current path from window.location
@@ -54,6 +54,7 @@ function App() {
       <Footer />
       <ScrollToTop />
       <CookieBanner />
+      <StructuredData />
     </div>
   );
 }
