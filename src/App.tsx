@@ -13,6 +13,7 @@ import ScrollToTop from './components/ScrollToTop';
 import CookieBanner from './components/CookieBanner';
 import Impressum from './components/Impressum';
 import StructuredData from './components/StructuredData';
+import Privacy from './components/Privacy';
 
 function App() {
   // Get the current path from window.location
@@ -24,6 +25,15 @@ function App() {
       <div className="min-h-screen bg-white pt-16">
         <Navbar />
         <Impressum />
+        <Footer />
+        <ScrollToTop />
+      </div>
+    );
+  } else if (path === '/datenschutz') {
+    return (
+      <div className="min-h-screen bg-white pt-16">
+        <Navbar />
+        <Privacy />
         <Footer />
         <ScrollToTop />
       </div>

@@ -3,12 +3,18 @@ import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const isImpressum = window.location.pathname === '/impressum';
 
   const scrollToSection = (sectionId: string) => {
+    if (isImpressum) {
+      window.location.href = '/#' + sectionId;
+      return;
+    }
+
     setIsOpen(false);
     const element = document.getElementById(sectionId);
     if (element) {
-      const navbarHeight = 64; // 4rem oder h-16
+      const navbarHeight = 64;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
 
@@ -24,11 +30,13 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <img 
-              src="/images/mek-security-logo.png"
-              alt="MEK Security Logo"
-              className="h-12 w-auto"
-            />
+            <a href="/">
+              <img 
+                src="/images/mek-security-logo.png"
+                alt="MEK Security Logo"
+                className="h-12 w-auto"
+              />
+            </a>
           </div>
 
           {/* Desktop Menü */}

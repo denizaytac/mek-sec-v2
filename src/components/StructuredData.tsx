@@ -1,11 +1,9 @@
-import React from 'react';
-
 const StructuredData = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "SecurityService",
     "name": "MEK Security",
-    "image": "https://www.mek-security.de/images/mek-security-logo.png",
+    "image": "https://meksecurity.de/images/mek-security-logo.png",
     "description": "Professioneller Sicherheitsdienst in Siegen und Umgebung. Spezialisiert auf Veranstaltungsschutz, Objektschutz und VIP-Security.",
     "address": {
       "@type": "PostalAddress",
@@ -19,8 +17,8 @@ const StructuredData = () => {
       "latitude": "50.8767",
       "longitude": "8.0173"
     },
-    "url": "https://www.mek-security.de",
-    "telephone": "+49-XXX-XXXXXXX",
+    "url": "https://www.meksecurity.de",
+    "telephone": "+491628069562",
     "areaServed": "Siegen und Umgebung",
     "priceRange": "€€"
   };

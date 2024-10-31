@@ -1,4 +1,3 @@
-import React from 'react';
 import { Calendar, Shield, UserCheck, PartyPopper, Car } from 'lucide-react';
 
 const Services = () => {
