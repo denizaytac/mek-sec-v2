@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Shield, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,7 +8,7 @@ const Navbar = () => {
     setIsOpen(false);
     const element = document.getElementById(sectionId);
     if (element) {
-      const navbarHeight = 64; // 4rem or h-16
+      const navbarHeight = 64; // 4rem oder h-16
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
 
@@ -24,11 +24,14 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <Shield className="w-8 h-8 text-primary-gold" />
-            <span className="ml-2 text-xl font-bold">MEK Security</span>
+            <img 
+              src="/images/mek-security-logo.png"
+              alt="MEK Security Logo"
+              className="h-12 w-auto"
+            />
           </div>
 
-          {/* Desktop Menu */}
+          {/* Desktop Menü */}
           <div className="hidden md:flex items-center space-x-8">
             <button onClick={() => scrollToSection('home')} className="text-white hover:text-primary-beige">Home</button>
             <button onClick={() => scrollToSection('services')} className="text-white hover:text-primary-beige">Dienstleistungen</button>
@@ -36,7 +39,7 @@ const Navbar = () => {
             <button onClick={() => scrollToSection('contact')} className="text-white hover:text-primary-beige">Kontakt</button>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menü Button */}
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -47,7 +50,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menü */}
         {isOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1">

@@ -20,12 +20,12 @@ const Celebrities = () => {
       image: "public/images/celebrities/serdar_karibik.jpeg"
     },
     {
-      name: "Celebrity 5",
-      image: "public/images/celebrities/celebrity_5.jpeg"
+      name: "Biyon Kattilathu",
+      image: "public/images/celebrities/biyon_kattilathu.jpeg"
     },
     {
-      name: "Celebrity 6",
-      image: "public/images/celebrities/celebrity_6.jpeg"
+      name: "Monika Gruber",
+      image: "public/images/celebrities/monika_gruber.jpeg"
     },
     {
       name: "Elton",

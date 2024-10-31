@@ -8,8 +8,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center mb-4">
-              <Shield className="w-8 h-8 text-primary-gold" />
-              <span className="ml-2 text-xl font-bold">MEK Security</span>
+              <img 
+                src="/images/mek-security-logo.png"
+                alt="MEK Security Logo"
+                className="h-12 w-auto"
+              />
             </div>
             <p className="text-sm text-white/80">
               Ihr zuverlässiger Partner für Sicherheitsdienstleistungen in Siegen und Umgebung.
