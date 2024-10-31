@@ -5,13 +5,13 @@ const Hero = () => {
     <div className="relative h-[600px]">
       <div className="absolute inset-0">
         <img 
-          src="https://images.unsplash.com/photo-1582095128060-e9ca8130cc6b?auto=format&fit=crop&q=80"
-          alt="Security Guard" 
+          src="/images/hero-security.jpg"
+          alt="MEK Security Mitarbeiter bei Nachtveranstaltung" 
           className="w-full h-full object-cover brightness-50"
         />
       </div>
       <div 
-        className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary-gold/30 to-primary/90 opacity-80"
+        className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/30 to-primary/90 opacity-80"
         style={{
           backgroundSize: '200% 200%',
           animation: 'gradientAnimation 15s ease infinite'
