@@ -47,22 +47,22 @@ const ClientLogos = () => {
   ];
 
   return (
-    <section className="py-16 bg-white border-t border-primary-beige/20">
+    <section className="py-24 bg-white border-t border-primary-beige/20">
       <div className="max-w-7xl mx-auto px-4">
-        <h3 className="text-center text-lg font-medium text-primary/60 mb-12">
+        <h3 className="text-center text-2xl font-semibold text-primary mb-16">
           Unseren Sicherheitsdienst vertrauen unter anderem
         </h3>
         
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 items-center">
           {logos.map((logo, index) => (
             <div 
               key={index} 
-              className="flex items-center justify-center p-4 grayscale hover:grayscale-0 transition-all duration-300"
+              className="flex items-center justify-center p-6 grayscale hover:grayscale-0 transition-all duration-300"
             >
               <img
                 src={logo.url}
                 alt={`${logo.name} Logo`}
-                className="max-h-12 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity"
+                className="max-h-20 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity"
               />
             </div>
           ))}

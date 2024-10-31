@@ -1,6 +1,9 @@
-import { Star } from 'lucide-react';
+import { Star, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useState } from 'react';
 
 const Celebrities = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  
   const celebrities = [
     {
       name: "Felix Sturm",
@@ -68,6 +71,25 @@ const Celebrities = () => {
     }
   ];
 
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => 
+      prevIndex === celebrities.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => 
+      prevIndex === 0 ? celebrities.length - 1 : prevIndex - 1
+    );
+  };
+
+  // Anzahl der sichtbaren Karten je nach Bildschirmgröße
+  const visibleCards = {
+    mobile: 1,    // Auf Mobilgeräten
+    tablet: 2,    // Auf Tablets
+    desktop: 4    // Auf Desktop
+  };
+
   return (
     <section className="py-20 bg-primary text-white">
       <div className="max-w-7xl mx-auto px-4">
@@ -78,26 +100,66 @@ const Celebrities = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {celebrities.map((celebrity, index) => (
+        <div className="relative">
+          <div className="overflow-hidden">
             <div 
-              key={index}
-              className="bg-white/5 rounded-xl overflow-hidden hover:bg-white/10 transition-all duration-300 group"
+              className="flex transition-transform duration-300 ease-in-out"
+              style={{ 
+                transform: `translateX(-${currentIndex * (100 / visibleCards.mobile)}%)` 
+              }}
             >
-              <div className="aspect-[3/4] relative overflow-hidden">
-                <img
-                  src={celebrity.image}
-                  alt={celebrity.name}
-                  className="absolute inset-0 w-full h-full object-cover object-top"
-                />
-              </div>
-              <div className="p-4">
-                <h3 className="text-lg font-semibold flex items-center gap-2">
-                  {celebrity.name}
-                  <Star className="w-4 h-4 text-primary-gold" />
-                </h3>
-              </div>
+              {celebrities.map((celebrity, index) => (
+                <div 
+                  key={index}
+                  className="w-full sm:w-1/2 lg:w-1/4 flex-shrink-0 px-3"
+                >
+                  <div className="bg-white/5 rounded-xl overflow-hidden hover:bg-white/10 transition-all duration-300">
+                    <div className="aspect-[3/4] relative overflow-hidden">
+                      <img
+                        src={celebrity.image}
+                        alt={celebrity.name}
+                        className="absolute inset-0 w-full h-full object-cover object-top"
+                      />
+                    </div>
+                    <div className="p-4">
+                      <h3 className="text-lg font-semibold flex items-center gap-2">
+                        {celebrity.name}
+                        <Star className="w-4 h-4 text-primary-gold" />
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
+          </div>
+
+          <button 
+            onClick={prevSlide}
+            className="absolute left-0 top-1/2 -translate-y-1/2 bg-primary-gold/80 hover:bg-primary-gold p-2 rounded-full text-white"
+          >
+            <ChevronLeft className="w-6 h-6" />
+          </button>
+
+          <button 
+            onClick={nextSlide}
+            className="absolute right-0 top-1/2 -translate-y-1/2 bg-primary-gold/80 hover:bg-primary-gold p-2 rounded-full text-white"
+          >
+            <ChevronRight className="w-6 h-6" />
+          </button>
+        </div>
+
+        <div className="flex justify-center mt-6 gap-2">
+          {celebrities.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={`w-2 h-2 rounded-full transition-all ${
+                index === currentIndex 
+                  ? 'bg-primary-gold w-4' 
+                  : 'bg-white/20'
+              }`}
+              aria-label={`Gehe zu Slide ${index + 1}`}
+            />
           ))}
         </div>
       </div>
