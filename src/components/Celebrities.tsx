@@ -4,54 +4,68 @@ import { Star } from 'lucide-react';
 const Celebrities = () => {
   const celebrities = [
     {
-      name: "David Beckham",
-      event: "Charity Gala 2023",
-      image: "https://images.unsplash.com/photo-1521119989659-a83eee488004?auto=format&fit=crop&q=80&w=400"
+      name: "Felix Sturm",
+      image: "public/images/celebrities/felix_sturm.png"
     },
     {
-      name: "Angela Merkel",
-      event: "Wirtschaftsforum Siegen",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=400"
+      name: "Ralf Schmitz",
+      image: "public/images/celebrities/ralf_schmitz.png"
     },
     {
-      name: "Till Lindemann",
-      event: "Konzert Siegerlandhalle",
-      image: "https://images.unsplash.com/photo-1509460913899-515f1df34fea?auto=format&fit=crop&q=80&w=400"
+      name: "Norman Langen",
+      image: "public/images/celebrities/norman_langen.png"
+    },  
+    {
+      name: "Serdar Karibik",
+      image: "public/images/celebrities/serdar_karibik.jpeg"
     },
     {
-      name: "Helene Fischer",
-      event: "Open Air 2023",
-      image: "https://images.unsplash.com/photo-1502323777036-f29e3972d82f?auto=format&fit=crop&q=80&w=400"
+      name: "Celebrity 5",
+      image: "public/images/celebrities/celebrity_5.jpeg"
     },
     {
-      name: "Manuel Neuer",
-      event: "Jugendcamp 2023",
-      image: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&q=80&w=400"
+      name: "Celebrity 6",
+      image: "public/images/celebrities/celebrity_6.jpeg"
     },
     {
-      name: "Barbara Schöneberger",
-      event: "TV-Gala",
-      image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&q=80&w=400"
+      name: "Elton",
+      image: "public/images/celebrities/elton.png"
     },
     {
-      name: "Jürgen Klopp",
-      event: "Benefizspiel 2023",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400"
+      name: "Enissa Amani",
+      image: "public/images/celebrities/enissa_amani.png"
     },
     {
-      name: "Heidi Klum",
-      event: "Fashion Show",
-      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=400"
+      name: "Karolin Kebekus",
+      image: "public/images/celebrities/karolin_kebekus.png"
     },
     {
-      name: "Thomas Gottschalk",
-      event: "Literaturfestival",
-      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=400"
+      name: "Kaya Yanar",
+      image: "public/images/celebrities/kaya_yanar.png"
     },
     {
-      name: "Sarah Connor",
-      event: "Stadtfest 2023",
-      image: "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&q=80&w=400"
+      name: "Kool Savas",
+      image: "public/images/celebrities/kool_savas.png"
+    },
+    {
+      name: "Lukas Podolski",
+      image: "public/images/celebrities/lukas_podolski.png"
+    },
+    {
+      name: "Olaf Schubert",
+      image: "public/images/celebrities/olaf_schubert.png"
+    },
+    {
+      name: "Osan Yaran",
+      image: "public/images/celebrities/osan_yaran.jpeg"
+    },
+    {
+      name: "Özcan Cosar",
+      image: "public/images/celebrities/özcan_cosar.jpeg"
+    },
+    {
+      name: "Robert Lewandowski",
+      image: "public/images/celebrities/robert_lewandowski.png"
     }
   ];
 
@@ -68,22 +82,21 @@ const Celebrities = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {celebrities.map((celebrity, index) => (
             <div 
-              key={index} 
-              className="group relative overflow-hidden rounded-xl aspect-[3/4]"
+              key={index}
+              className="bg-white/5 rounded-xl overflow-hidden hover:bg-white/10 transition-all duration-300 group"
             >
-              <img
-                src={celebrity.image}
-                alt={celebrity.name}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent opacity-90">
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <div className="flex items-center mb-2">
-                    <Star className="w-5 h-5 text-primary-gold fill-current" />
-                    <h3 className="ml-2 font-semibold text-lg">{celebrity.name}</h3>
-                  </div>
-                  <p className="text-white/80 text-sm">{celebrity.event}</p>
-                </div>
+              <div className="aspect-[3/4] relative overflow-hidden">
+                <img
+                  src={celebrity.image}
+                  alt={celebrity.name}
+                  className="absolute inset-0 w-full h-full object-cover object-top"
+                />
+              </div>
+              <div className="p-4">
+                <h3 className="text-lg font-semibold flex items-center gap-2">
+                  {celebrity.name}
+                  <Star className="w-4 h-4 text-primary-gold" />
+                </h3>
               </div>
             </div>
           ))}
