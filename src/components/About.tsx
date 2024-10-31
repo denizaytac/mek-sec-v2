@@ -1,5 +1,4 @@
-import React from 'react';
-import { Shield, Award, Users, Clock } from 'lucide-react';
+import { Award, Users, Clock } from 'lucide-react';
 
 const About = () => {
   return (
@@ -42,7 +41,7 @@ const About = () => {
           
           <div className="relative">
             <img 
-              src="https://images.unsplash.com/photo-1582095128060-e9ca8130cc6b?auto=format&fit=crop&q=80&w=800"
+              src="/images/about_security.jpg"
               alt="MEK Security Team" 
               className="rounded-lg shadow-xl"
             />

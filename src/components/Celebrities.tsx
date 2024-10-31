@@ -7,67 +7,67 @@ const Celebrities = () => {
   const celebrities = [
     {
       name: "Felix Sturm",
-      image: "public/images/celebrities/felix_sturm.png"
+      image: "/images/celebrities/felix_sturm.png"
     },
     {
       name: "Ralf Schmitz",
-      image: "public/images/celebrities/ralf_schmitz.png"
+      image: "/images/celebrities/ralf_schmitz.png"
     },
     {
       name: "Norman Langen",
-      image: "public/images/celebrities/norman_langen.png"
+      image: "/images/celebrities/norman_langen.png"
     },  
     {
       name: "Serdar Karibik",
-      image: "public/images/celebrities/serdar_karibik.jpeg"
+      image: "/images/celebrities/serdar_karibik.jpeg"
     },
     {
       name: "Biyon Kattilathu",
-      image: "public/images/celebrities/biyon_kattilathu.jpeg"
+      image: "/images/celebrities/biyon_kattilathu.jpeg"
     },
     {
       name: "Monika Gruber",
-      image: "public/images/celebrities/monika_gruber.jpeg"
+      image: "/images/celebrities/monika_gruber.jpeg"
     },
     {
       name: "Elton",
-      image: "public/images/celebrities/elton.png"
+      image: "/images/celebrities/elton.png"
     },
     {
       name: "Enissa Amani",
-      image: "public/images/celebrities/enissa_amani.png"
+      image: "/images/celebrities/enissa_amani.png"
     },
     {
       name: "Karolin Kebekus",
-      image: "public/images/celebrities/karolin_kebekus.png"
+      image: "/images/celebrities/karolin_kebekus.png"
     },
     {
       name: "Kaya Yanar",
-      image: "public/images/celebrities/kaya_yanar.png"
+      image: "/images/celebrities/kaya_yanar.png"
     },
     {
       name: "Kool Savas",
-      image: "public/images/celebrities/kool_savas.png"
+      image: "/images/celebrities/kool_savas.png"
     },
     {
       name: "Lukas Podolski",
-      image: "public/images/celebrities/lukas_podolski.png"
+      image: "/images/celebrities/lukas_podolski.png"
     },
     {
       name: "Olaf Schubert",
-      image: "public/images/celebrities/olaf_schubert.png"
+      image: "/images/celebrities/olaf_schubert.png"
     },
     {
       name: "Osan Yaran",
-      image: "public/images/celebrities/osan_yaran.jpeg"
+      image: "/images/celebrities/osan_yaran.jpeg"
     },
     {
       name: "Özcan Cosar",
-      image: "public/images/celebrities/özcan_cosar.jpeg"
+      image: "/images/celebrities/özcan_cosar.jpeg"
     },
     {
       name: "Robert Lewandowski",
-      image: "public/images/celebrities/robert_lewandowski.png"
+      image: "/images/celebrities/robert_lewandowski.png"
     }
   ];
 
