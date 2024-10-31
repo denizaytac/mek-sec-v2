@@ -1,31 +1,49 @@
-import React from 'react';
-
 const ClientLogos = () => {
   const logos = [
     {
-      name: "Siegen Arkaden",
-      url: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&q=80&w=200&h=100",
+      name: "Accenta",
+      url: "/images/references/accenta.png"
     },
     {
-      name: "Industrie Park Süd",
-      url: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=200&h=100",
+      name: "Edermühle",
+      url: "/images/references/edermühle.png"
     },
     {
-      name: "Stadtwerke Siegen",
-      url: "https://images.unsplash.com/photo-1554469384-e58fac16e23a?auto=format&fit=crop&q=80&w=200&h=100",
+      name: "EEW Group",
+      url: "/images/references/eew-group.png"
     },
     {
-      name: "Kreis Siegen-Wittgenstein",
-      url: "https://images.unsplash.com/photo-1577760258779-e787a1733016?auto=format&fit=crop&q=80&w=200&h=100",
+      name: "Kulturpur 23",
+      url: "/images/references/kulturpur_23.png"
     },
     {
-      name: "Universität Siegen",
-      url: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&q=80&w=200&h=100",
+      name: "Livemodus",
+      url: "/images/references/livemodus.png"
+    },
+    {
+      name: "Lyz",
+      url: "/images/references/lyz.png"
+    },
+    {
+      name: "Netphen",
+      url: "/images/references/netphen.jpeg"
+    },
+    {
+      name: "Push",
+      url: "/images/references/push.jpeg"
     },
     {
       name: "Siegerlandhalle",
-      url: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=200&h=100",
+      url: "/images/references/siegerlandhalle.jpeg"
     },
+    {
+      name: "Stadt Siegen",
+      url: "/images/references/stadtsiegen.jpeg"
+    },
+    {
+      name: "Trial GP",
+      url: "/images/references/trial-gp.jpeg"
+    }
   ];
 
   return (

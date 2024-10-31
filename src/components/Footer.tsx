@@ -1,6 +1,3 @@
-import React from 'react';
-import { Shield } from 'lucide-react';
-
 const Footer = () => {
   return (
     <footer className="bg-primary text-white">
