@@ -14,25 +14,25 @@ const About = () => {
               Wir bieten maßgeschneiderte Sicherheitslösungen für Unternehmen, öffentliche Einrichtungen und Privatpersonen. Dabei setzen wir auf modernste Technik und kontinuierliche Weiterbildung unserer Mitarbeiter, um Ihnen stets den bestmöglichen Service zu garantieren.
             </p>
             
-            <div className="grid grid-cols-3 gap-6">
-              <div className="flex items-center">
-                <Award className="w-8 h-8 text-primary-gold mr-3" />
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+              <div className="flex flex-col items-center text-center">
+                <Award className="w-12 h-12 text-primary-gold mb-3" />
                 <div>
-                  <h4 className="font-semibold text-primary">20+ Jahre</h4>
+                  <h4 className="text-lg font-semibold text-primary">20+ Jahre</h4>
                   <p className="text-sm text-primary/60">Erfahrung</p>
                 </div>
               </div>
-              <div className="flex items-center">
-                <Users className="w-8 h-8 text-primary-gold mr-3" />
+              <div className="flex flex-col items-center text-center">
+                <Users className="w-12 h-12 text-primary-gold mb-3" />
                 <div>
-                  <h4 className="font-semibold text-primary">Qualifiziert</h4>
+                  <h4 className="text-lg font-semibold text-primary">Qualifiziert</h4>
                   <p className="text-sm text-primary/60">Geschultes Personal</p>
                 </div>
               </div>
-              <div className="flex items-center">
-                <Clock className="w-8 h-8 text-primary-gold mr-3" />
+              <div className="flex flex-col items-center text-center">
+                <Clock className="w-12 h-12 text-primary-gold mb-3" />
                 <div>
-                  <h4 className="font-semibold text-primary">24/7 Service</h4>
+                  <h4 className="text-lg font-semibold text-primary">24/7 Service</h4>
                   <p className="text-sm text-primary/60">Immer für Sie da</p>
                 </div>
               </div>
